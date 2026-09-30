@@ -1,0 +1,17 @@
+[package]
+name = "lite-corzadb"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "lite_corzadb"
+path = "src/lib.rs"
+
+[dependencies]
+
+[profile.release]
+opt-level = "z"
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+strip = true
